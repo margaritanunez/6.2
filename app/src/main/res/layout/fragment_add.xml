@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.Fragment_agregar">
+    android:background="#BB8082"
+    tools:context=".presentation.add.AddFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -14,106 +15,125 @@
         app:layout_constraintGuide_begin="147dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nombretv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Nombre de Item"
+        android:text="Nombre Item"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/preciounitariotv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="Precio Unidad"
+        android:text="Precio unidad"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/nombretv" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/cantidadtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:text="Cantidad"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/preciounitariotv" />
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/productet"
         android:layout_width="265dp"
         android:layout_height="54dp"
+        android:background="#6E7582"
         android:ems="10"
-        android:hint="Chela"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Producto"
         android:inputType="text"
+        android:textColorHint="#C6FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="7dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextPrecio"
+        android:id="@+id/priceet"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#6E7582"
         android:ems="10"
-        android:hint="0000"
+        android:gravity="center_horizontal"
+        android:hint="Precio"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColorHint="#C6FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintTop_toBottomOf="@+id/productet"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextCantidad"
+        android:id="@+id/quantityet"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#6E7582"
         android:ems="10"
-        android:hint="0000"
+        android:gravity="center"
+        android:hint="Cantidad"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColorHint="#C6FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:layout_editor_absoluteY="168dp"
+        app:layout_constraintTop_toBottomOf="@+id/priceet"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
         android:layout_marginBottom="36dp"
-        android:text="TOTAL ACTUAL"
+        android:text="Total "
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/totaltv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnGuardar"
+        android:id="@+id/savebutton"
         android:layout_width="144dp"
         android:layout_height="66dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="92dp"
+        android:backgroundTint="#046582"
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/txtResultado"
+        android:id="@+id/totaltv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="180dp"
         android:layout_marginBottom="28dp"
-        android:text="00000"
+        android:background="#6E7582"
+        android:text="0"
+        android:textColor="#C6FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/savebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
